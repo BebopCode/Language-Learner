@@ -1,0 +1,28 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+.basic-div{
+    @apply bg-gradient-to-br hover:bg-gradient-to-tl w-1/2 h-24 rounded-lg flex items-center justify-center;
+}
+
+.text-format{
+    @apply text-2xl text-cyan-200;
+}
+
+.button-cyan{
+    @apply  basic-div from-cyan-500 to-blue-500 text-format;
+}
+
+.button-green{
+    @apply basic-div from-green-300 to-green-500 text-format ;
+}
+
+.button-red{
+    @apply basic-div from-cyan-400 to-red-500  text-format ;
+}
+
+.body-style{
+    @apply min-h-screen bg-gradient-to-br from-blue-400 via-teal-500 to-purple-500
+}
