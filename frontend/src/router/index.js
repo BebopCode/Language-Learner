@@ -1,18 +1,18 @@
 import { createWebHistory, createRouter } from "vue-router";
 import Learner from "../views/Learner.vue";
-import Home from "../views/Home.vue";
+import Callback from "../views/Callback.vue";
 
 
 const routes = [
   {
     path: "/",
-    name: "Home",
-    component: Home,
+    name: "Learner",
+    component: Learner,
   },
   {
-    path:"/learner",
-    name:"Learner",
-    component:Learner,
+    path: "/auth/google/callback",
+    name: "Callback",
+    component: Callback,
   }
 ];
 

@@ -4,25 +4,29 @@
 
 
 .basic-div{
-    @apply bg-gradient-to-br hover:bg-gradient-to-tl w-1/2 h-24 rounded-lg flex items-center justify-center;
+    @apply bg-gradient-to-br hover:bg-gradient-to-tl w-1/2 h-16 rounded-lg ;
 }
 
 .text-format{
-    @apply text-2xl text-cyan-200;
+    @apply relative inline-flex items-center justify-center overflow-hidden rounded-md border border-neutral-200 bg-blue-100 px-6 font-medium text-neutral-600 text-xl transition-all duration-100 [box-shadow:5px_5px_rgb(82_82_82)] active:translate-x-[3px] active:translate-y-[3px] active:[box-shadow:0px_0px_rgb(82_82_82)];
 }
 
 .button-cyan{
-    @apply  basic-div from-cyan-500 to-blue-500 text-format;
+    @apply m-4 relative inline-flex h-12 items-center justify-center overflow-hidden rounded-md border border-neutral-200 bg-transparent px-6 font-medium text-neutral-600 text-xl transition-all duration-100 [box-shadow:5px_5px_rgb(82_82_82)] active:translate-x-[3px] active:translate-y-[3px] active:[box-shadow:0px_0px_rgb(82_82_82)];
 }
 
 .button-green{
-    @apply basic-div from-green-300 to-green-500 text-format ;
+    @apply m-4 p-2  relative inline-flex h-12 items-center justify-center overflow-hidden rounded-md border border-neutral-200 bg-teal-500 px-6 font-medium text-neutral-600 text-2xl transition-all duration-100 [box-shadow:5px_5px_rgb(82_82_82)] active:translate-x-[3px] active:translate-y-[3px] active:[box-shadow:0px_0px_rgb(82_82_82)]; ;
 }
 
 .button-red{
-    @apply basic-div from-cyan-400 to-red-500  text-format ;
+    @apply m-4  relative inline-flex h-12 items-center justify-center overflow-hidden rounded-md border border-neutral-200 bg-orange-200 px-6 font-medium text-neutral-600 transition-all duration-100 [box-shadow:5px_5px_rgb(82_82_82)] active:translate-x-[3px] active:translate-y-[3px] active:[box-shadow:0px_0px_rgb(82_82_82)];
+}
+
+.button-inside{
+    @apply relative inline-flex  items-center justify-center overflow-hidden rounded-md border border-neutral-200 bg-teal-500 p-3 font-medium text-neutral-600 text-lg transition-all duration-100 [box-shadow:5px_5px_rgb(82_82_82)] active:translate-x-[3px] active:translate-y-[3px] active:[box-shadow:0px_0px_rgb(82_82_82)];
 }
 
 .body-style{
-    @apply min-h-screen bg-gradient-to-br from-blue-400 via-teal-500 to-purple-500
+    @apply bg-blue-300 min-h-screen w-full;
 }
