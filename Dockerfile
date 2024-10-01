@@ -16,4 +16,4 @@ COPY . .
 EXPOSE 8001
 
 # Run a management command, e.g., migrate, before starting the Django server
-CMD ["sh", "-c", "python manage.py makemigrations && python manage.py migrate && python manage.py create_database && python manage.py runserver 0.0.0.0:8000"]
+CMD ["sh", "-c", "python language_learner/manage.py makemigrations && python language_learner/manage.py migrate && python language_learner/manage.py create_database && python language_learner/manage.py runserver 0.0.0.0:8001"]
