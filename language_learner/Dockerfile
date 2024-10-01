@@ -13,7 +13,6 @@ RUN pip install --no-cache-dir -r requirements.txt
 # Copy the Django project into the container
 COPY . .
 
-# Expose port 8000 to allow access to the Django development server
 EXPOSE 8001
 
 # Run a management command, e.g., migrate, before starting the Django server
