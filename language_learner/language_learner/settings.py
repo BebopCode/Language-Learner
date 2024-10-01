@@ -128,14 +128,18 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
-CORS_ALLOWED_ORIGINS = os.getenv('CORS_ALLOWED_ORIGINS', '').split(',')
-CORS_ALLOW_METHODS = [
+ALLOW_CORS = os.getenv('ALLOW_CORS')
+if(ALLOW_CORS):
+    CORS_ALLOWED_ORIGINS = os.getenv('CORS_ALLOWED_ORIGINS', '').split(',')
+    CORS_ALLOW_METHODS = [
     'GET',
     'POST',
     'PUT',
     'DELETE',
     'OPTIONS',
-]
-
-print(CORS_ALLOWED_ORIGINS)
-print(ALLOWED_HOSTS)
+    ]
+    print(f'CORS ALLOWED ORIGINS{CORS_ALLOWED_ORIGINS}')
+else:
+    CORS_ALLOW_ALL_ORIGINS = True
+    print('Allowed All Origins')
+print(f'Hosts Allowed: {ALLOWED_HOSTS}')
