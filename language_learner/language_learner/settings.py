@@ -129,7 +129,7 @@ STATIC_URL = 'static/'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 ALLOW_CORS = os.getenv('ALLOW_CORS')
-if(ALLOW_CORS=='False'):
+if(ALLOW_CORS=='True'):
     CORS_ALLOWED_ORIGINS = os.getenv('CORS_ALLOWED_ORIGINS', '').split(',')
     CORS_ALLOW_METHODS = [
     'GET',
