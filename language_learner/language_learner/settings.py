@@ -139,7 +139,11 @@ if(ALLOW_CORS=='True'):
     'OPTIONS',
     ]
     print(f'CORS ALLOWED ORIGINS{CORS_ALLOWED_ORIGINS}')
+    CORS_ALLOW_CREDENTIALS = True
+
 else:
     CORS_ALLOW_ALL_ORIGINS = True
+    CORS_ALLOW_CREDENTIALS = True
+
     print('Allowed All Origins')
 print(f'Hosts Allowed: {ALLOWED_HOSTS}')
